@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Glory", sans-serif;
+  src: url("../fonts/Glory-SemiBold.woff2") format("woff2"), url("../fonts/Glory-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Glory", sans-serif;
+  src: url("../fonts/Glory-Medium.woff2") format("woff2"), url("../fonts/Glory-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* SASS */
+/* BG-COLOR */
+/* CUSTOM PROPS */
+:root {
+  --color-dark: #070707;
+  --color-dark-grey: #828282;
+  --bg-color-body-white: #fff;
+  --bg-color-body-white-grey: #F6F6F6;
+}
+
+/*
+  Josh's Custom CSS Reset + some modifications
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* GLOBAL */
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Glory", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: var(--bg-color-body-white);
+  color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+}
+
+/* AUTOFILL-STYLES */
+/*input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-color: transparent;
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}*/
+/* PLACEHOLDER-STYLES */
+/*::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: rgba(52, 49, 61, 0.5);
+  opacity: 1;
+}*/
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=main.css.map */
