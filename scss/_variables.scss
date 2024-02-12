@@ -6,6 +6,8 @@ $color-dark-grey: #828282;
 $bg-color-body-white: #fff;
 $bg-color-body-white-grey: #F6F6F6;
 
+/* EFFECT */
+$transition: all 0.5s ease 0s;
 
 /* CUSTOM PROPS */
 :root {
@@ -15,4 +17,5 @@ $bg-color-body-white-grey: #F6F6F6;
   --bg-color-body-white: #{$bg-color-body-white};
   --bg-color-body-white-grey: #{$bg-color-body-white-grey};
 
+  --transition: #{$transition};
 }
