@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import "fonts";
-@import "variables";
-@import "reset";
-@import "general";
-@import "blocks/blocks-all";
-@import "mixin";
+@use "fonts";
+@use "variables";
+@use "reset";
+@use "general";
+@use "blocks/blocks-all";
+@use "mixin";
