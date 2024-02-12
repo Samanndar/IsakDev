@@ -1,0 +1,43 @@
+@use "sass:color";
+
+.header {
+  padding-bottom: 104px;
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-dark-grey);
+  }
+}
+
+/*NAV*/
+.nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: var(--color-dark-grey);
+  }
+
+  &__link--active {
+    color: var(--color-dark);
+  }
+
+
+}
+
+.nav__list {}
+
+.nav__item {}
+
+.nav__link {}
+
+.header__line {}

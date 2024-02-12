@@ -17,6 +17,10 @@ img {
   height: auto;
 }
 
+ul, li, ol, a {
+  text-decoration: none;
+  list-style: none;
+}
 
 /* AUTOFILL-STYLES */
 /*input:-webkit-autofill,
