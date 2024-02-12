@@ -20,11 +20,18 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
+
+
   }
 
   &__link {
     font-weight: 600;
-    color: var(--color-dark-grey);
+    color: color.scale($color-dark, $alpha: -50%);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-dark);
+    }
   }
 
   &__link--active {
