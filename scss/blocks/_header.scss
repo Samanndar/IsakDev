@@ -1,27 +1,29 @@
 @use "sass:color";
 
 .header {
-  padding-bottom: 104px;
+  padding-bottom: 20px;
 
   &__line {
     width: 100%;
     height: 1px;
     background-color: var(--color-dark-grey);
   }
+
+  &__icon {
+    display: none;
+  }
 }
 
 /*NAV*/
 .nav {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
-
-
   }
 
   &__link {
@@ -37,14 +39,98 @@
   &__link--active {
     color: var(--color-dark);
   }
+}
 
+/* 765 */
+@include breakpoint-up(42.5em) {
+  .header {
+    padding-bottom: 33px;
+  }
+
+  .nav {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
 }
 
-.nav__list {}
+/* 580 */
+@include breakpoint-down(36.3em) {
+  .header {
+    &__line {
+      display: none;
+    }
 
-.nav__item {}
+    &__icon {
+      display: block;
+      z-index: 5;
+      position: relative;
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+    }
 
-.nav__link {}
+    &__span,
+    &__icon::before,
+    &__icon::after {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      transition: all 0.3s ease 0s;
+      background-color: var(--bg-color-body-white);
+    }
 
-.header__line {}
+    &__icon::before,
+    &__icon::after {
+      content: "";
+    }
+
+    &__icon::after {
+      top: 0;
+    }
+
+    &__icon::before {
+      bottom: 0;
+    }
+
+    &__span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+    }
+
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(-100%, 0px);
+    background-color: rgb(0, 0, 0, 0.9);
+    padding: 100px 30px 30px 30px;
+    transition: left 0.3s ease 0s;
+
+    &__list {
+      max-width: 375px;
+      display: flex;
+      flex-direction: column;
+      gap: 68px;
+      align-items: stretch;
+    }
+
+    &__list>li {
+      margin-bottom: 30px;
+    }
+
+    &__list>li:last-child {
+      margin-bottom: 0;
+    }
+
+    &__link {
+      font-size: 24px;
+      text-align: start;
+    }
+  }
+}
