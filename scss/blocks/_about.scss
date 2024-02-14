@@ -1,0 +1,40 @@
+.about {
+  padding-top: 108px;
+  padding-bottom: 107px;
+  text-align: center;
+  background-color: var(--bg-color-body-white-grey);
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading>span {
+    margin-bottom: 50px;
+  }
+
+  &__heading>span:last-child {
+    margin-bottom: 0;
+  }
+
+  &__span {
+    width: 316px;
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-dark);
+
+  }
+}
+
+// 765
+@include breakpoint-up(42.5em) {
+  .about {
+    &__span {
+      width: 485px;
+    }
+
+  }
+}
