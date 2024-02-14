@@ -28,12 +28,20 @@
     color: var(--bg-color-body-white);
     padding: 13px 30px;
     border: 1px solid var(--color-dark);
-    border-radius: 50px;
     background-color: var(--color-dark);
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      color: var(--color-dark);
+      background-color: var(--bg-color-body-white-grey);
+    }
   }
 
 }
-/* 580 */ 
+
+/* 580 */
 @include breakpoint-down(36em) {
   .contacts {
     padding: 40px 0px 40px 0px;

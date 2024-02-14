@@ -223,7 +223,7 @@ select:-webkit-autofill:focus {
 }
 .nav__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding-left: 0;
 }
@@ -473,6 +473,7 @@ select:-webkit-autofill:focus {
     margin-bottom: 83px;
   }
   .skills__body {
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -576,8 +577,14 @@ select:-webkit-autofill:focus {
   color: var(--bg-color-body-white);
   padding: 13px 30px;
   border: 1px solid var(--color-dark);
-  border-radius: 50px;
   background-color: var(--color-dark);
+  border-radius: 50px;
+  transition: var(--transition);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.contacts__link:hover {
+  color: var(--color-dark);
+  background-color: var(--bg-color-body-white-grey);
 }
 
 /* 580 */
