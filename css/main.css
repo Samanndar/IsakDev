@@ -182,15 +182,34 @@ select:-webkit-autofill:focus {
 }
 
 .header {
-  padding-bottom: 20px;
+  padding-bottom: 104px;
 }
 .header__line {
   width: 100%;
   height: 1px;
   background-color: var(--color-dark-grey);
+  margin-bottom: 40px;
 }
 .header__icon {
   display: none;
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+}
+.header__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header__title {
+  font-size: 47px;
+  font-weight: 600;
+  margin-top: 0px;
+}
+.header__text {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 /*NAV*/
@@ -245,9 +264,9 @@ select:-webkit-autofill:focus {
     left: 0;
     cursor: pointer;
   }
-  .header__content {
-    display: flex;
+  .header__heading {
     flex-direction: column;
+    align-items: flex-start;
   }
   .header__title {
     width: 100%;
