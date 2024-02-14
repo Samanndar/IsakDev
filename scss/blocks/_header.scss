@@ -43,10 +43,6 @@
 
 /* 765 */
 @include breakpoint-up(42.5em) {
-  .header {
-    padding-bottom: 33px;
-  }
-
   .nav {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -61,16 +57,46 @@
       display: none;
     }
 
+    &__flex {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      align-items: flex-start;
+    }
+
     &__icon {
+      order: 1;
       display: block;
       z-index: 5;
       position: relative;
-      width: 30px;
-      height: 18px;
+      width: 33px;
+      height: 20px;
+      top: 10px;
+      left: 0;
       cursor: pointer;
     }
 
-    &__span,
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      width: 100%;
+      font-size: 47px;
+      font-weight: 600;
+      margin-top: 0px;
+      margin-bottom: 23px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 37px;
+    }
+
+
+    & span,
     &__icon::before,
     &__icon::after {
       position: absolute;
@@ -78,7 +104,7 @@
       width: 100%;
       height: 10%;
       transition: all 0.3s ease 0s;
-      background-color: var(--bg-color-body-white);
+      background-color: var(--color-dark);
     }
 
     &__icon::before,
@@ -94,7 +120,7 @@
       bottom: 0;
     }
 
-    &__span {
+    & span {
       top: 50%;
       transform: scale(1) translate(0px, -50%);
     }
@@ -104,20 +130,22 @@
   .nav {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
-    transform: translate(-100%, 0px);
-    background-color: rgb(0, 0, 0, 0.9);
-    padding: 100px 30px 30px 30px;
+    padding: 30px;
+    background-color: var(--bg-color-body-white);
     transition: left 0.3s ease 0s;
+
 
     &__list {
       max-width: 375px;
       display: flex;
       flex-direction: column;
-      gap: 68px;
-      align-items: stretch;
+      gap: 25px;
+      justify-content: flex-end;
+      align-items: start;
+      text-align: start;
     }
 
     &__list>li {
@@ -130,7 +158,37 @@
 
     &__link {
       font-size: 24px;
-      text-align: start;
+      font-weight: 600;
     }
+  }
+}
+
+/* ACTIVE */
+.active {
+  left: 0;
+}
+
+.header__icon {
+  &.active {
+    width: 22px;
+    height: 18px;
+  }
+
+  &.active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+
+  &.active::after {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+    background-color: var(--color-dark-grey);
+
+  }
+
+  &.active::before {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+    background-color: var(--color-dark-grey);
+
   }
 }
