@@ -1,0 +1,95 @@
+.skills {
+  padding-top: 83px;
+  padding-bottom: 91px;
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 34px;
+    color: var(--color-dark);
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--color-dark);
+    margin-bottom: 70px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__body>*:not(:last-child) {
+    margin: 0px 0px 81px 0px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    margin-bottom: 24px;
+  }
+
+  &__picname {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: var(--color-dark-grey);
+    margin-bottom: 40px;
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 9px;
+  }
+}
+
+/* 765 */
+@include breakpoint-up(47.5em) {
+  .skills {
+    padding-top: 91px;
+    padding-bottom: 101px;
+
+    &__title {
+      margin-bottom: 69px;
+    }
+
+    &__text {
+      margin-bottom: 83px;
+    }
+
+    &__body {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__body>*:not(:last-child) {
+      margin: 0px 90px 0px 0px;
+    }
+
+    &__img {
+      margin-bottom: 27px;
+    }
+
+  }
+
+}
