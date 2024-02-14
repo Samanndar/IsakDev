@@ -1,6 +1,6 @@
 .portfolio {
   text-align: center;
-  padding: 81px 0px 80px 0px;
+  padding: 81px 0px 0px 0px;
   background-color: var(--bg-color-body-white-grey);
 
   &__container {
@@ -33,7 +33,7 @@
 }
 
 .cards-portfolio {
-  margin-bottom: 77px;
+  margin-bottom: 37px;
 
   &__img {
     margin-bottom: 33px;
@@ -54,7 +54,7 @@
 
 @include breakpoint-up(46.5em) {
   .portfolio {
-    padding: 112px 0px 96px 0px;
+    padding: 60px 0px 50px 0px;
 
     &__title {
       margin-bottom: 46px;
@@ -62,8 +62,6 @@
   }
 
   .cards-portfolio {
-    margin-bottom: 99px;
-
     &__img {
       margin-bottom: 44px;
     }

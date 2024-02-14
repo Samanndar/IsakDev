@@ -29,12 +29,23 @@
   }
 }
 
-// 765
+/* 765 */
 @include breakpoint-up(42.5em) {
   .about {
     &__span {
       width: 485px;
     }
 
+  }
+}
+/*580*/
+@include breakpoint-down(34em) {
+  .about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__heading>span {
+      margin-bottom: 30px;
+    }
   }
 }

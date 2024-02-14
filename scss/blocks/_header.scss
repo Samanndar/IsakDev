@@ -76,6 +76,8 @@
 /* 580 */
 @include breakpoint-down(36.3em) {
   .header {
+    padding-bottom: 50px;
+
     &__line {
       display: none;
     }
@@ -105,17 +107,14 @@
     }
 
     &__title {
-      width: 100%;
-      font-size: 47px;
-      font-weight: 600;
+      font-size: 37px;
       margin-top: 0px;
-      margin-bottom: 23px;
+      margin-bottom: 20px;
     }
 
     &__text {
       font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 37px;
+      margin-bottom: 28px;
     }
 
     & span,
@@ -179,7 +178,7 @@
     }
 
     &__link {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 600;
     }
   }

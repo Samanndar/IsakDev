@@ -93,3 +93,16 @@
   }
 
 }
+@include breakpoint-up(46.5em) {
+  .skills {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__body>*:not(:last-child) {
+      margin: 0px 0px 31px 0px;
+    }
+
+    &__img {
+      margin-bottom: 20px;
+    }
+  }
+}
