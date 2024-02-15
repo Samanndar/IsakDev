@@ -628,5 +628,11 @@ select:-webkit-autofill:focus {
     margin-right: 21px;
   }
 }
+.footer__copy {
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-dark-grey);
+}
 
 /*# sourceMappingURL=main.css.map */
