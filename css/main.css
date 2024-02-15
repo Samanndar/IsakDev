@@ -605,5 +605,28 @@ select:-webkit-autofill:focus {
     font-size: 18px;
   }
 }
+.socials {
+  padding-top: 30px;
+  padding-bottom: 45px;
+}
+.socials__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials__img:not(:last-child) {
+  margin-right: 61px;
+}
+
+/* 505 */
+@media only screen and (max-width: 32.5em) {
+  .socials {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .socials__img:not(:last-child) {
+    margin-right: 21px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,26 @@
+.socials {
+  padding-top: 30px;
+  padding-bottom: 45px;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img:not(:last-child) {
+    margin-right: 61px;
+  }
+}
+
+/* 505 */
+@include breakpoint-down(32.5em) {
+  .socials {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &__img:not(:last-child) {
+      margin-right: 21px;
+    }
+  }
+}
