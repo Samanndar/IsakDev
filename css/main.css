@@ -629,7 +629,7 @@ select:-webkit-autofill:focus {
 }
 
 /* 505 */
-@media only screen and (max-width: 32.5em) {
+@media only screen and (max-width: 48.5em) {
   .socials {
     padding-top: 25px;
     padding-bottom: 25px;
