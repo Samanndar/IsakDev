@@ -55,7 +55,7 @@
     font-size: 14px;
     text-align: center;
     color: var(--color-dark-grey);
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   &__stars {
@@ -64,6 +64,8 @@
   }
 
   &__icon {
+    width: 20px;
+    height: 20px;
     margin-right: 9px;
   }
 }
@@ -86,11 +88,15 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: wrap;
-
+      gap: 30px;
     }
 
     &__body>*:not(:last-child) {
-      margin: 0px 90px 0px 0px;
+      margin: 0px 0px 0px 0px;
+    }
+
+    &__content {
+      flex: 1 1 20%;
     }
 
     &__img {

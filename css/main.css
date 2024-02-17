@@ -414,8 +414,8 @@ select:-webkit-autofill:focus {
 /* 765 */
 @media only screen and (min-width: 48.5rem) {
   .about {
-    padding-top: 108px;
-    padding-bottom: 107px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .about__heading > span {
     margin-bottom: 50px;
@@ -486,13 +486,15 @@ select:-webkit-autofill:focus {
   font-size: 14px;
   text-align: center;
   color: var(--color-dark-grey);
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 .skills__stars {
   display: flex;
   align-items: center;
 }
 .skills__icon {
+  width: 20px;
+  height: 20px;
   margin-right: 9px;
 }
 
@@ -512,9 +514,13 @@ select:-webkit-autofill:focus {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 30px;
   }
   .skills__body > *:not(:last-child) {
-    margin: 0px 90px 0px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+  .skills__content {
+    flex: 1 1 20%;
   }
   .skills__img {
     margin-bottom: 27px;
