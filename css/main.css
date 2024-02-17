@@ -621,7 +621,7 @@ select:-webkit-autofill:focus {
   align-items: center;
 }
 .socials__img:not(:last-child) {
-  margin-right: 61px;
+  margin-right: 45px;
 }
 .socials__icon {
   width: 70px;
@@ -634,8 +634,15 @@ select:-webkit-autofill:focus {
     padding-top: 25px;
     padding-bottom: 25px;
   }
+  .socials__container {
+    flex-wrap: wrap;
+  }
   .socials__img:not(:last-child) {
     margin-right: 21px;
+  }
+  .socials__icon {
+    width: 40px;
+    height: 40px;
   }
 }
 .footer {
