@@ -451,13 +451,13 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 34px;
   color: var(--color-dark);
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .skills__text {
   font-weight: 500;
   font-size: 18px;
   color: var(--color-dark);
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 .skills__body {
   display: flex;
@@ -501,14 +501,14 @@ select:-webkit-autofill:focus {
 /* 765 */
 @media only screen and (min-width: 48.5em) {
   .skills {
-    padding-top: 91px;
-    padding-bottom: 101px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .skills__title {
-    margin-bottom: 69px;
+    margin-bottom: 30px;
   }
   .skills__text {
-    margin-bottom: 83px;
+    margin-bottom: 30px;
   }
   .skills__body {
     align-items: center;
@@ -533,16 +533,16 @@ select:-webkit-autofill:focus {
   }
   .skills__title {
     font-size: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   .skills__text {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .skills__picname {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   .skills__body > *:not(:last-child) {
-    margin: 0px 0px 40px 0px;
+    margin: 0px 0px 30px 0px;
   }
   .skills__img {
     margin-bottom: 20px;
@@ -616,7 +616,7 @@ select:-webkit-autofill:focus {
   }
 }
 .contacts {
-  padding: 50px 0px 50px 0px;
+  padding: 30px 0px 30px 0px;
   text-align: center;
 }
 .contacts__content {
@@ -634,7 +634,7 @@ select:-webkit-autofill:focus {
   font-weight: 500;
   font-size: 18px;
   color: var(--color-dark);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .contacts__link {
   font-weight: 500;
