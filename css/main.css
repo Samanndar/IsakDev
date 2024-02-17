@@ -185,8 +185,14 @@ select:-webkit-autofill:focus {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 42em) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 .header {
-  padding-bottom: 83px;
+  padding-bottom: 65px;
 }
 .header__img {
   display: flex;
@@ -212,7 +218,7 @@ select:-webkit-autofill:focus {
   justify-content: space-around;
 }
 .header__title {
-  font-size: 47px;
+  font-size: 34px;
   font-weight: 600;
   margin-top: 0px;
 }
@@ -245,25 +251,34 @@ select:-webkit-autofill:focus {
 }
 
 /* 765 */
-@media only screen and (min-width: 42.5em) {
+@media only screen and (min-width: 47.5em) {
+  .header {
+    padding-bottom: 83px;
+  }
+  .header__title {
+    font-size: 47px;
+  }
   .nav {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
 /* 580 */
-@media only screen and (max-width: 36.3em) {
+@media only screen and (max-width: 38.5em) {
   .header {
-    padding-bottom: 50px;
+    padding-bottom: 25px;
   }
   .header__line {
     display: none;
   }
   .header__flex {
     display: flex;
-    justify-content: center;
-    padding: 30px;
+    justify-content: space-around;
+    padding: 15px;
     align-items: flex-start;
+  }
+  .header__img {
+    justify-content: flex-start;
   }
   .header__icon {
     order: 1;
@@ -281,7 +296,7 @@ select:-webkit-autofill:focus {
     align-items: flex-start;
   }
   .header__title {
-    font-size: 37px;
+    font-size: 21px;
     margin-top: 0px;
     margin-bottom: 20px;
   }
@@ -493,10 +508,23 @@ select:-webkit-autofill:focus {
     margin-bottom: 27px;
   }
 }
-@media only screen and (max-width: 36.5em) {
+@media only screen and (max-width: 38.5em) {
   .skills {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .skills__title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  .skills__text {
+    margin-bottom: 30px;
+  }
+  .skills__picname {
+    margin-bottom: 25px;
+  }
+  .skills__body > *:not(:last-child) {
+    margin: 0px 0px 40px 0px;
   }
   .skills__img {
     margin-bottom: 20px;
@@ -554,6 +582,19 @@ select:-webkit-autofill:focus {
   }
   .cards-portfolio__img {
     margin-bottom: 44px;
+  }
+}
+@media only screen and (max-width: 38.5em) {
+  .portfolio {
+    padding: 30px 0px 0px 0px;
+  }
+  .portfolio__title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+  .portfolio__img--item {
+    width: 100%;
+    height: 100%;
   }
 }
 .contacts {

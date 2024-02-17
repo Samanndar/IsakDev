@@ -1,7 +1,7 @@
 @use "sass:color";
 
 .header {
-  padding-bottom: 83px;
+  padding-bottom: 65px;
 
   &__img {
     display: flex;
@@ -32,7 +32,7 @@
   }
 
   &__title {
-    font-size: 47px;
+    font-size: 34px;
     font-weight: 600;
     margin-top: 0px;
   }
@@ -71,7 +71,15 @@
 }
 
 /* 765 */
-@include breakpoint-up(42.5em) {
+@include breakpoint-up(47.5em) {
+  .header {
+    padding-bottom: 83px;
+
+    &__title {
+      font-size: 47px;
+    }
+  }
+
   .nav {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -80,9 +88,9 @@
 }
 
 /* 580 */
-@include breakpoint-down(36.3em) {
+@include breakpoint-down(38.5em) {
   .header {
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 
     &__line {
       display: none;
@@ -90,9 +98,13 @@
 
     &__flex {
       display: flex;
-      justify-content: center;
-      padding: 30px;
+      justify-content: space-around;
+      padding: 15px;
       align-items: flex-start;
+    }
+
+    &__img {
+      justify-content: flex-start;
     }
 
     &__icon {
@@ -113,7 +125,7 @@
     }
 
     &__title {
-      font-size: 37px;
+      font-size: 21px;
       margin-top: 0px;
       margin-bottom: 20px;
     }

@@ -101,10 +101,27 @@
 
 }
 
-@include breakpoint-down(36.5em) {
+@include breakpoint-down(38.5em) {
   .skills {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &__title {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      margin-bottom: 30px;
+    }
+
+    &__picname {
+      margin-bottom: 25px;
+    }
+
+    &__body>*:not(:last-child) {
+      margin: 0px 0px 40px 0px;
+    }
 
     &__img {
       margin-bottom: 20px;
