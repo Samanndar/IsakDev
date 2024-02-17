@@ -1,6 +1,6 @@
 .about {
-  padding-top: 108px;
-  padding-bottom: 107px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   text-align: center;
   background-color: var(--bg-color-body-white-grey);
 
@@ -30,14 +30,25 @@
 }
 
 /* 765 */
-@include breakpoint-up(42.5em) {
+@include breakpoint-up(48.5rem) {
   .about {
-    &__span {
-      width: 485px;
+    padding-top: 108px;
+    padding-bottom: 107px;
+
+    &__heading>span {
+      margin-bottom: 50px;
     }
 
+    &__heading>span:last-child {
+      margin-bottom: 0;
+    }
+
+    &__span {
+      width: 415px;
+    }
   }
 }
+
 /*580*/
 @include breakpoint-down(34em) {
   .about {

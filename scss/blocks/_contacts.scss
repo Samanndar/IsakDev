@@ -1,5 +1,5 @@
 .contacts {
-  padding: 90px 0px 50px 0px;
+  padding: 50px 0px 50px 0px;
   text-align: center;
 
   &__content {
@@ -44,7 +44,7 @@
 /* 580 */
 @include breakpoint-down(36em) {
   .contacts {
-    padding: 40px 0px 40px 0px;
+    padding: 25px 0px 25px 0px;
     text-align: center;
 
     &__title {
