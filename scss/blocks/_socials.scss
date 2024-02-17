@@ -11,6 +11,11 @@
   &__img:not(:last-child) {
     margin-right: 61px;
   }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 /* 505 */
