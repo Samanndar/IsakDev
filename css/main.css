@@ -631,6 +631,7 @@ select:-webkit-autofill:focus {
   padding: 20px;
   position: absolute;
   top: 5%;
+  z-index: 5;
   background-color: var(--bg-color-body-white-grey);
   animation: content 0.5s ease-in-out forwards;
   opacity: 0;
@@ -665,6 +666,21 @@ select:-webkit-autofill:focus {
     transform: translateY(0);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal__content {
+    padding: 10px;
+  }
+  .modal__close {
+    margin: 10px;
+  }
+  .modal__slider {
+    margin-right: 0px;
+  }
+  .modal span img {
+    width: 20px;
+    height: 20px;
   }
 }
 .carousel {
@@ -744,6 +760,73 @@ select:-webkit-autofill:focus {
     transform: translateX(0);
     opacity: 1;
     filter: blur(0px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .carousel__slide img {
+    width: 390px;
+    height: 390px;
+    object-fit: contain;
+  }
+  .carousel__slide {
+    display: none;
+    animation: animation 1s ease-in-out forwards;
+  }
+  .carousel__slide--block {
+    display: block;
+  }
+  .carousel__slider {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .carousel__points {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 0;
+    position: relative;
+    z-index: 5;
+  }
+  .carousel__point {
+    width: 15px;
+    height: 15px;
+    background-color: #6d6a6a;
+    border-radius: 50%;
+    border: 2px solid #6d6a6a;
+    cursor: pointer;
+  }
+  .carousel__point--white {
+    background-color: var(--bg-color-body-white-grey);
+  }
+  .carousel__point:not(:last-child) {
+    margin-right: 10px;
+  }
+  .carousel__spans {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: var(--bg-color-body-white);
+  }
+  .carousel__spans span {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .carousel__right {
+    transform: translateX(32px);
+  }
+  @keyframes animation {
+    from {
+      transform: translateX(30px);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 }
 .contacts {

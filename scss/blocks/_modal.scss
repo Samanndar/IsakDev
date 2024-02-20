@@ -1,5 +1,4 @@
 .modal {
-  // position: relative;
 
   &__container {
     display: flex;
@@ -15,6 +14,7 @@
     padding: 20px;
     position: absolute;
     top: 5%;
+    z-index: 5;
     background-color: var(--bg-color-body-white-grey);
     animation: content 0.5s ease-in-out forwards;
     opacity: 0;
@@ -57,5 +57,26 @@
     transform: translateY(0);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+
+@include breakpoint-down(768px) {
+  .modal {
+    &__content {
+      padding: 10px;
+    }
+
+    &__close {
+      margin: 10px;
+    }
+
+    &__slider {
+      margin-right: 0px;
+    }
+
+    & span img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
