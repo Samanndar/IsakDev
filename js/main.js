@@ -37,7 +37,9 @@ function init () {
   })
   modalClose.addEventListener("click", function() {
     modalContent.classList.toggle("modal__show")
-    document.body.classList.toggle("modal__body")
+    setTimeout(() => {
+      document.body.classList.toggle("modal__body")
+    }, 1000);
   })
   document.addEventListener("keydown", (e) => {
     if(e.code == "Escape" && modalContent.classList.contains("modal__show")) {
