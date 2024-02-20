@@ -24,6 +24,73 @@ function init () {
       }
     })
   })
+  // MODAL
+  const modalClick = document.querySelector(".modal__click");
+  const modalContent = document.querySelector(".modal__content");
+  const modalClose = document.querySelector(".modal__close");
+
+  modalClick.addEventListener("click", function() {
+    modalContent.classList.toggle("modal__show")
+    setTimeout(() => {
+      document.body.classList.toggle("modal__body")
+    }, 1000)
+  })
+  modalClose.addEventListener("click", function() {
+    modalContent.classList.toggle("modal__show")
+    document.body.classList.toggle("modal__body")
+  })
+  document.addEventListener("keydown", (e) => {
+    if(e.code == "Escape" && modalContent.classList.contains("modal__show")) {
+      document.body.classList.toggle("modal__body")
+      modalContent.classList.toggle("modal__show")
+    }
+  })
+  // SLIDER
+  const slide = document.querySelectorAll(".carousel__slide")
+  const point = document.querySelectorAll(".carousel__point")
+  const rightCarousel = document.querySelector(".carousel__right")
+  const leftCarousel = document.querySelector(".carousel__left")
+  let offset = 0;
+
+  point[0].classList.add("carousel__point--white")
+  slide[0].classList.add("carousel__slide--block")
+
+  for(let i = 0; i < point.length; i++) {
+    point[i].addEventListener("click", function() {
+      for(let k = 0; k< slide.length; k++) {
+        point[k].classList.remove("carousel__point--white")
+        slide[k].classList.remove("carousel__slide--block")
+      }
+      offset = i;
+      point[offset].classList.add("carousel__point--white")
+      slide[offset].classList.add("carousel__slide--block")
+    })
+  }
+
+  rightCarousel.addEventListener("click", function() {
+    for(let i = 0; i < slide.length; i++) {
+      slide[i].classList.remove("carousel__slide--block");
+      point[i].classList.remove("carousel__point--white");
+    }
+    offset++
+    if(offset == slide.length) {
+      offset = 0;
+    }
+    point[offset].classList.add("carousel__point--white");
+    slide[offset].classList.add("carousel__slide--block");
+  })
+  leftCarousel.addEventListener("click", function() {
+    for(let i = 0; i < slide.length; i++) {
+      slide[i].classList.remove("carousel__slide--block");
+      point[i].classList.remove("carousel__point--white");
+    }
+    offset--
+    if(offset < 0) {
+      offset = slide.length - 1;
+    }
+    point[offset].classList.add("carousel__point--white");
+    slide[offset].classList.add("carousel__slide--block");
+  })
 }
 
 document.addEventListener('DOMContentLoaded', init);

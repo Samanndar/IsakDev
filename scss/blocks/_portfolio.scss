@@ -34,8 +34,10 @@
 
 .cards-portfolio {
   margin-bottom: 37px;
+  position: relative;
 
   &__img {
+    cursor: pointer;
     margin-bottom: 33px;
   }
 
@@ -45,6 +47,7 @@
     color: var(--color-dark);
     text-decoration: underline;
     transition: var(--transition);
+    cursor: pointer;
 
     &:hover {
       color: var(--color-dark-grey);
@@ -71,10 +74,12 @@
 @include breakpoint-down(38.5em) {
   .portfolio {
     padding: 30px 0px 0px 0px;
+
     &__title {
       font-size: 28px;
       margin-bottom: 32px;
     }
+
     &__img {
       &--item {
         width: 100%;
