@@ -553,7 +553,7 @@ select:-webkit-autofill:focus {
     opacity: 1;
   }
 }
-/* 765 */
+/* 765-x */
 @media only screen and (min-width: 48.5em) {
   .skills {
     padding-top: 70px;

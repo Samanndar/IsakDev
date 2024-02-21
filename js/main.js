@@ -108,7 +108,8 @@ function init () {
        skillPoint[k].classList.remove("skills-block")
         skillSlide[k].classList.remove("skills-block")
       }
-      offset = i;
+      
+      skills = i;
       skillPoint[skills].classList.add("skills-block")
       skillSlide[skills].classList.add("skills-block")
     })
