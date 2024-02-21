@@ -464,6 +464,7 @@ select:-webkit-autofill:focus {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .skills__body > *:not(:last-child) {
   margin: 0px 0px 51px 0px;
@@ -476,6 +477,8 @@ select:-webkit-autofill:focus {
 }
 .skills__img {
   margin-bottom: 24px;
+  opacity: 0;
+  animation: skills 0.5s ease-in-out forwards;
 }
 .skills__img--item {
   width: 90px;
@@ -498,6 +501,58 @@ select:-webkit-autofill:focus {
   margin-right: 9px;
 }
 
+/* SLIDER */
+.skills__slide {
+  display: none;
+  transition: all 0.5s ease 0s;
+}
+
+.skills__points {
+  display: flex;
+  align-items: center;
+}
+
+.skills__point {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6d6a6a;
+  background-color: #6d6a6a;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.skills__point:not(:last-child) {
+  margin-right: 10px;
+}
+
+.skills-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+}
+.skills-carousel span img {
+  width: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.skills-block {
+  display: block;
+  background-color: #fff;
+}
+
+@keyframes skills {
+  from {
+    transform: translateX(90px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 /* 765 */
 @media only screen and (min-width: 48.5em) {
   .skills {
@@ -511,9 +566,6 @@ select:-webkit-autofill:focus {
     margin-bottom: 30px;
   }
   .skills__body {
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     gap: 30px;
   }
   .skills__body > *:not(:last-child) {
@@ -546,6 +598,23 @@ select:-webkit-autofill:focus {
   }
   .skills__img {
     margin-bottom: 20px;
+  }
+  .skills__point {
+    width: 18px;
+    height: 18px;
+  }
+  .skills-carousel {
+    width: 70%;
+    height: 50%;
+  }
+  .skills-carousel span img {
+    width: 15px;
+    width: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .skills-carousel {
+    width: 90%;
   }
 }
 .portfolio {

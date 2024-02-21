@@ -91,6 +91,53 @@ function init () {
     point[offset].classList.add("carousel__point--white");
     slide[offset].classList.add("carousel__slide--block");
   })
+
+  // Slider-skills
+  const skillSlide = document.querySelectorAll(".skills__slide")
+  const skillPoint = document.querySelectorAll(".skills__point")
+  const skillRightCarousel = document.querySelector(".skills-carousel__right")
+  const skillLeftCarousel = document.querySelector(".skills-carousel__left")
+  let skills = 0;
+
+  skillPoint[0].classList.add("skills-block")
+  skillSlide[0].classList.add("skills-block")
+
+  for(let i = 0; i < skillPoint.length; i++) {
+    skillPoint[i].addEventListener("click", function() {
+      for(let k = 0; k< skillSlide.length; k++) {
+       skillPoint[k].classList.remove("skills-block")
+        skillSlide[k].classList.remove("skills-block")
+      }
+      offset = i;
+      skillPoint[skills].classList.add("skills-block")
+      skillSlide[skills].classList.add("skills-block")
+    })
+  }
+
+  skillRightCarousel.addEventListener("click", function() {
+    for(let i = 0; i < skillSlide.length; i++) {
+      skillSlide[i].classList.remove("skills-block");
+      skillPoint[i].classList.remove("skills-block");
+    }
+    skills++
+    if(skills == skillSlide.length) {
+      skills = 0;
+    }
+    skillPoint[skills].classList.add("skills-block");
+    skillSlide[skills].classList.add("skills-block");
+  })
+  skillLeftCarousel.addEventListener("click", function() {
+    for(let i = 0; i < skillSlide.length; i++) {
+      skillSlide[i].classList.remove("skills-block");
+      skillPoint[i].classList.remove("skills-block");
+    }
+    skills--
+    if(skills < 0) {
+      skills = skillSlide.length - 1;
+    }
+    skillPoint[skills].classList.add("skills-block");
+    skillSlide[skills].classList.add("skills-block");
+  })
 }
 
 document.addEventListener('DOMContentLoaded', init);

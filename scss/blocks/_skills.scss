@@ -28,6 +28,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    position: relative;
   }
 
   &__body>*:not(:last-child) {
@@ -43,6 +44,8 @@
 
   &__img {
     margin-bottom: 24px;
+    opacity: 0;
+    animation: skills .5s ease-in-out forwards;
 
     &--item {
       width: 90px;
@@ -70,6 +73,62 @@
   }
 }
 
+/* SLIDER */
+.skills__slide {
+  display: none;
+  transition: all 0.5s ease 0s;
+}
+
+.skills__points {
+  display: flex;
+  align-items: center;
+}
+
+.skills__point {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6d6a6a;
+  background-color: #6d6a6a;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.skills-carousel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+
+  & span img {
+    width: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+}
+
+.skills-block {
+  display: block;
+  background-color: #fff;
+}
+
+@keyframes skills {
+  from {
+    transform: translateX(90px);
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
 /* 765 */
 @include breakpoint-up(48.5em) {
   .skills {
@@ -85,9 +144,6 @@
     }
 
     &__body {
-      align-items: center;
-      flex-direction: row;
-      flex-wrap: wrap;
       gap: 30px;
     }
 
@@ -132,5 +188,26 @@
     &__img {
       margin-bottom: 20px;
     }
+  }
+
+  .skills__point {
+    width: 18px;
+    height: 18px;
+  }
+
+  .skills-carousel {
+    width: 70%;
+    height: 50%;
+
+    & span img {
+      width: 15px;
+      width: 15px;
+    }
+  }
+}
+
+@include breakpoint-down(480px) {
+  .skills-carousel {
+    width: 90%;
   }
 }
